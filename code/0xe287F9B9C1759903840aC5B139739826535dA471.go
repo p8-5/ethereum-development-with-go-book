@@ -1,4 +1,4 @@
-package main
+Lopackage main
 
 import (
 	"context"
@@ -17,7 +17,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	account := common.HexToAddress("0x71c7656ec7ab88b098defb751b7401b5f6d8976f")
+	account := common.HexToAddress("0xe287F9B9C1759903840aC5B139739826535dA471")
 	balance, err := client.BalanceAt(context.Background(), account, nil)
 	if err != nil {
 		log.Fatal(err)
