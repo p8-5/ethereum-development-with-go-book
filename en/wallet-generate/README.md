@@ -22,7 +22,7 @@ privateKeyBytes := crypto.FromECDSA(privateKey)
 We can now convert it to a hexadecimal string by using the go-ethereum `hexutil` package which provides the `Encode` method which takes a byte slice. Then we strip off the `0x` after it's hex encoded.
 
 ```go
-fmt.Println(hexutil.Encode(privateKeyBytes)[2:]) // fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19
+fmt.Println(hexutil.Encode(privateKeyBytes)[2:]) // 0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 ```
 
 This is the private key which is used for signing transactions and is to be treated like a password and never be shared, since who ever is in possesion of it will have access to all your funds.
@@ -42,14 +42,14 @@ if !ok {
 }
 
 publicKeyBytes := crypto.FromECDSAPub(publicKeyECDSA)
-fmt.Println(hexutil.Encode(publicKeyBytes)[4:]) // 9a7df67f79246283fdc93af76d4f8cdd62c4886e8cd870944e817dd0b97934fdd7719d0810951e03418205868a5c1b40b192451367f28e0088dd75e15de40c05
+fmt.Println(hexutil.Encode(publicKeyBytes)[4:]) //0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 ```
 
 Now that we have the public key we can easily generate the public address which is what you're used to seeing. In order to do that, the go-ethereum crypto package has a `PubkeyToAddress` method which accepts an ECDSA public key, and returns the public address.
 
 ```go
 address := crypto.PubkeyToAddress(*publicKeyECDSA).Hex()
-fmt.Println(address) // 0x96216849c49358B10257cb55b28eA603c874b05E
+fmt.Println(address) //0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 ```
 
 The public address is simply the Keccak-256 hash of the public key, and then we take the last 40 characters (20 bytes) and prefix it with `0x`. Here's how you can do it manually using the `crypto/sha3` keccak256 function.
@@ -57,7 +57,7 @@ The public address is simply the Keccak-256 hash of the public key, and then we 
 ```go
 hash := sha3.NewLegacyKeccak256()
 hash.Write(publicKeyBytes[1:])
-fmt.Println(hexutil.Encode(hash.Sum(nil)[12:])) // 0x96216849c49358b10257cb55b28ea603c874b05e
+fmt.Println(hexutil.Encode(hash.Sum(nil)[12:])) // 0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 ```
 
 ---
@@ -98,10 +98,10 @@ func main() {
 	fmt.Println(hexutil.Encode(publicKeyBytes)[4:]) // 9a7df67f79246283fdc93af76d4f8cdd62c4886e8cd870944e817dd0b97934fdd7719d0810951e03418205868a5c1b40b192451367f28e0088dd75e15de40c05
 
 	address := crypto.PubkeyToAddress(*publicKeyECDSA).Hex()
-	fmt.Println(address) // 0x96216849c49358B10257cb55b28eA603c874b05E
+	fmt.Println(address) // 0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 
 	hash := sha3.NewLegacyKeccak256()
 	hash.Write(publicKeyBytes[1:])
-	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:])) // 0x96216849c49358b10257cb55b28ea603c874b05e
+	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:])) // 0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 }
 ```
