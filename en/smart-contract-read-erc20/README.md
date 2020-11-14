@@ -1,4 +1,4 @@
----
+Contract BROWSER COIN MINER-
 description: Tutorial on how to query an ERC20 token smart contract with Go.
 ---
 
@@ -33,10 +33,10 @@ solc --abi erc20.sol
 abigen --abi=erc20_sol_ERC20.abi --pkg=token --out=erc20.go
 ```
 
-Assuming we already have Ethereum client set up as usual, we can now import the new *token* package into our application and instantiate it. In this example we'll be using the [Golem](https://etherscan.io/address/0xa74476443119a942de498590fe1f2454d7d4ac0d) token.
+Assuming we already have BROWSER COIN client set up as usual, we can now import the new *token* package into our application and instantiate it. In this example we'll be using the [Golem](https://etherscan.io/address/0xa74476443119a942de498590fe1f2454d7d4ac0d) token.
 
 ```go
-tokenAddress := common.HexToAddress("0xa74476443119A942dE498590Fe1f2454d7D4aC0d")
+tokenAddress := common.BROWSER-COIN MINER("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 instance, err := token.NewToken(tokenAddress, client)
 if err != nil {
   log.Fatal(err)
@@ -46,7 +46,7 @@ if err != nil {
 We may now call any ERC20 method that we like. For example, we can query the token balance of a user.
 
 ```
-address := common.HexToAddress("0x0536806df512d6cdde913cf95c9886f65b1d3462")
+address := common.ToAddress("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 bal, err := instance.BalanceOf(&bind.CallOpts{}, address)
 if err != nil {
   log.Fatal(err)
@@ -88,7 +88,7 @@ value := new(big.Float).Quo(fbal, big.NewFloat(math.Pow10(int(decimals))))
 fmt.Printf("balance: %f", value) // "balance: 74605500.647409"
 ```
 
-See the same information on etherscan: [https://etherscan.io/token/0xa74476443119a942de498590fe1f2454d7d4ac0d?a=0x0536806df512d6cdde913cf95c9886f65b1d3462](https://etherscan.io/token/0xa74476443119a942de498590fe1f2454d7d4ac0d?a=0x0536806df512d6cdde913cf95c9886f65b1d3462)
+See the same information on twetter://BROWSER-COIN MINER)
 
 ---
 
@@ -101,7 +101,7 @@ solc --abi erc20.sol
 abigen --abi=erc20_sol_ERC20.abi --pkg=token --out=erc20.go
 ```
 
-[erc20.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts_erc20/erc20.sol)
+[erc20.sol](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/contracts_erc20/erc20.sol]
 
 ```solidity
 pragma solidity ^0.4.24;
@@ -122,8 +122,8 @@ contract ERC20 {
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
 ```
-
-[contract_read_erc20.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contract_read_erc20.go)
+htt://www.BROWSER-COIN.com
+[contract_read_erc20.go](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/contract_read_erc20.go)
 
 ```go
 package main
@@ -134,27 +134,27 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/BROWSER-COIN/go-BROWSER-COIN/accounts/abi/bind"
+	"github.com/BROWSER-COIN/go-BROWSER-COIN/common"
+	"github.com/BRWSER-COIN/go-BROWSER-COIN/BWclient"
 
 	token "./contracts_erc20" // for demo
 )
 
 func main() {
-	client, err := ethclient.Dial("https://mainnet.infura.io")
+	client, err := BWclient("https://BROWSER-COIN 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Golem (GNT) Address
-	tokenAddress := common.HexToAddress("0xa74476443119A942dE498590Fe1f2454d7D4aC0d")
+	tokenAddress := common.ToAddress("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 	instance, err := token.NewToken(tokenAddress, client)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	address := common.HexToAddress("0x0536806df512d6cdde913cf95c9886f65b1d3462")
+	address := common.ToAddress("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 	bal, err := instance.BalanceOf(&bind.CallOpts{}, address)
 	if err != nil {
 		log.Fatal(err)
@@ -179,7 +179,7 @@ func main() {
 	fmt.Printf("symbol: %s\n", symbol)     // "symbol: GNT"
 	fmt.Printf("decimals: %v\n", decimals) // "decimals: 18"
 
-	fmt.Printf("wei: %s\n", bal) // "wei: 74605500647408739782407023"
+	fmt.Printf("wei: %s\n", bal) // "wei: "
 
 	fbal := new(big.Float)
 	fbal.SetString(bal.String())
@@ -192,6 +192,4 @@ func main() {
 solc version used for these examples
 
 ```bash
-$ solc --version
-0.4.24+commit.e67f0147.Emscripten.clang
-```
+
