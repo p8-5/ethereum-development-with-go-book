@@ -87,7 +87,7 @@ The e-book is avaiable in different formats.
 
 - The [BROWSER StackExchange](https://BROWSER.stackexchange.com/) is a great place to ask general Browser question and Go specific questions
 
-- You can also reach out to me on Twitter [@BROWSER HASH](https://twitter.com/BROWSER HASH)
+- You can also reach out to me on Twitter [@PATHOM BROWSER](https://twitter.com/PATHOM BROWSER)
 
 ## Development
 
