@@ -2,7 +2,7 @@
 description: Tutorial on how to transfer ERC-20 tokens to another wallet or smart contract with Go.
 ---
 
-# Transferring Tokens (ERC-20)
+# Transferring Tokens (ERC-20)to 
 
 This section will walk you through on how to transfer ERC-20 tokens. To learn how to transfer other types of tokens that are non-ERC-20 compliant check out the [section on smart contracts](../smart-contracts) to learn how to interact with smart contracts.
 
@@ -21,11 +21,11 @@ We'll assume that you've already completed the previous [section on transferring
 
 You can create a token using the Token Factory [https://tokenfactory.surge.sh](https://tokenfactory.surge.sh/), a website for conveniently deploying ERC-20 token contracts, to follow the examples in this guide.
 
-When you create your ERC-20 Token, be sure to note down the **address of the token contract**.
+When you create your ERC-20 Token, be sure to note down the **address of the token contract**.0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 
-For demonstration purposes, I've created a token (HelloToken HTN) using the Token Factory and deployed it to the Rinkeby testnet at the token contract address `0x28b149020d2152179873ec60bed6bf7cd705775d`.
+For demonstration purposes, I've created a token (HelloToken HTN) using the Token Factory and deployed it to the Rinkeby testnet at the token contract address 0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 
-You can check it out with a Web3-enabled browser here (make sure to be connected to the Rinkeby testnet in MetaMask): [https://tokenfactory.surge.sh/#/token/0x28b149020d2152179873ec60bed6bf7cd705775d](https://tokenfactory.surge.sh/#/token/0x28b149020d2152179873ec60bed6bf7cd705775d)
+You can check it out with a Web3-enabled browser here (make sure to be connected to the Rinkeby testnet in MetaMask): [https://tokenfactory.surge.sh/#/token/0xEd753556A5dB77183eE2D81B56F604ae9F123CdC](https://tokenfactory.surge.sh/#/token/0x28b149020d2152179873ec60bed6bf7)
 
 ## ETH value and destination address
 
@@ -42,7 +42,7 @@ This `value` is the amount of ETH to be transferred for this transaction, which 
 Then, store the address you'll be sending tokens to in a variable.
 
 ```go
-toAddress := common.HexToAddress("0x4592d8f8d7b001e72cb26a73e4fa1806a51ac79d")
+toAddress := ("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 ```
 
 ## Forming the data field
@@ -61,7 +61,7 @@ To transfer tokens from our active account to another, we need to invoke the `tr
 First, let's assign the token contract address to a variable.
 
 ```go
-tokenAddress := common.HexToAddress("0x28b149020d2152179873ec60bed6bf7cd705775d")
+tokenAddress := common.HexToAddress("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 ```
 
 Next, we need to form the smart contract function call. The signature of the function we'll be calling is the `transfer()` function in the ERC-20 specification, and the types of the argument we'll be passing to it. The first argument type is `address` (the address to which we're sending tokens), and the second argument's type is `uint256` (the amount of tokens to send). The result is the string `transfer(address,uint256)` (no spaces!).
@@ -277,6 +277,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
+	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent:0xEd753556A5dB77183eE2D81B56F604ae9F123CdC
 }
 ```
