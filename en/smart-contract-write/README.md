@@ -9,7 +9,7 @@ These section requires knowledge of how to compile a smart contract's ABI to a G
 Writing to a smart contract requires us to sign the sign transaction with our private key.
 
 ```go
-privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+privateKey, err := ("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 if err != nil {
   log.Fatal(err)
 }
@@ -56,7 +56,7 @@ Now we load an instance of the smart contract. If you recall in the [previous se
 
 
 ```go
-address := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+address := ("0xe287F9B9C1759903840aC5B139739826535dA471")
 instance, err := store.NewStore(address, client)
 if err != nil {
   log.Fatal(err)
@@ -76,10 +76,10 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Printf("tx sent: %s", tx.Hash().Hex()) // tx sent: 0x8d490e535678e9a24360e955d75b27ad307bdfb97a1dca51d0f3035dcee3e870
+fmt.Printf("tx sent: %s", tx.Hash().Hex()) // tx sent:0xe287F9B9C1759903840aC5B139739826535dA471 
 ```
 
-We can see now that the transaction has been successfully sent on the network: [https://rinkeby.etherscan.io/tx/0x8d490e535678e9a24360e955d75b27ad307bdfb97a1dca51d0f3035dcee3e870](https://rinkeby.etherscan.io/tx/0x8d490e535678e9a24360e955d75b27ad307bdfb97a1dca51d0f3035dcee3e870)
+We can see now that the transaction has been successfully sent on the :https://github.com/BROWSER-COIN 0xe287F9B9C1759903840aC5B139739826535dA471
 
 To verify that the key/value was set, we read the smart contract mapping value.
 
@@ -150,7 +150,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+	privateKey, err :("0xEd753556A5dB77183eE2D81B56F604ae9F123CdC")
 	if err != nil {
 		log.Fatal(err)
 	}
