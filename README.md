@@ -1,17 +1,17 @@
 
-  <"https://go Browserbook.org"><img src="https://github.com/BROWSER-COIN/BROWSER-development-with-go-book
+  https://github.com/BROWSER-COIN/BROWSER-development-with-go-book
 
 # BROWSER Development with Go
 
 > [SMART BOOK BROWSER](https://www.browsercoin.com)
 
-[![License](https:github.com/BROWSER COIN LICENSE)
+(https:github.com/BROWSER COIN LICENSE)
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
 ## Online
 
-[https://goBrowserbook.org](https://goBrowserbook.org/)
+[https://gobrowserbook.org](https://gobrowserbook.org/)
 
 ## E-book
 
