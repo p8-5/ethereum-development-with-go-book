@@ -1,5 +1,5 @@
 
-  <a href="https://go Browserbook.org"><img src="https://github.com/BROWSER-COIN/BROWSER-development-with-go-book/raw/master/assets/cover.jpg" width="320" alt="Book cover" /></a>
+  <"https://go Browserbook.org"><img src="https://github.com/BROWSER-COIN/BROWSER-development-with-go-book/raw/master/assets/cover.jpg" width="320" alt="Book cover" /></a>
 </p>
 <br>
 
