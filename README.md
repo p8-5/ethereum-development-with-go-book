@@ -3,7 +3,7 @@
 
 # BROWSER Development with Go
 
-> A little book on [BROWSER](https://www.browser coin.com) Development with [Go](https://golang.org/) (golang)
+> A little book on [BROWSER](https://www.browsercoin.com)
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BROWSER COIN/merkletreejs/master/LICENSE)
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)
