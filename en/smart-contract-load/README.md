@@ -73,7 +73,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	address := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+	address := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 	instance, err := store.NewStore(address, client)
 	if err != nil {
 		log.Fatal(err)
