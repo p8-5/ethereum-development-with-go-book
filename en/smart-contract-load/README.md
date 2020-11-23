@@ -9,7 +9,7 @@ These section requires knowledge of how to compile a smart contract's ABI to a G
 Once you've compiled your smart contract's ABI to a Go package using the `abigen` tool, the next step is to call the "New" method, which is in the format `New<ContractName>`, so in our example if you recall it's going to be *NewStore*. This initializer method takes in the address of the smart contract and returns a contract instance that you can start interact with it.
 
 ```go
-address := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+address := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 instance, err := store.NewStore(address, client)
 if err != nil {
   log.Fatal(err)
@@ -30,7 +30,7 @@ solc --bin Store.sol
 abigen --bin=Store_sol_Store.bin --abi=Store_sol_Store.abi --pkg=store --out=Store.go
 ```
 
-[Store.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
+[Store.sol](https://github.com/afortunado21/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
 
 ```solidity
 pragma solidity ^0.4.24;
@@ -52,7 +52,7 @@ contract Store {
 }
 ```
 
-[contract_load.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contract_load.go)
+[contract_load.go](https://github.com/afortunado21/ethereum-development-with-go-book/blob/master/code/contract_load.go)
 
 ```go
 package main
@@ -88,5 +88,4 @@ solc version used for these examples
 
 ```bash
 $ solc --version
-0.4.24+commit.e67f0147.Emscripten.clang
 ```
