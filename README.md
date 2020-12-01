@@ -1,7 +1,7 @@
 
-  https://github.com/BROWSER-COIN/BROWSER-development-with-go-book
+  https://github.com/BROWSER-COIN/BROWSER-development-smart-book
 
-# BROWSER Development with Go
+# SMART BOOK BROWSER 
 
 > [SMART BOOK BROWSER](https://www.browsercoin.com)
 
@@ -9,17 +9,13 @@
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-## Online
-
-[https://gobrowserbook.org](https://gobrowserbook.org/)
-
-## E-book
+## BW-book
 
 The e-book is avaiable in different formats.
 
-- [PDF](https://gobrowserbook.org/BROWSER-development-with-go.pdf)
-- [EPUB](https://gobrowserbook.org/BROWSER-development-with-go.epub)
-- [MOBI](https://gobrowserbook.org/BROWSER-development-with-go.mobi)
+- (https://gobrowserbook.org/BROWSER-development-with-go.pdf)
+- (https://gobrowserbook.org/BROWSER-development-with-go.epub)
+- (https://gobrowserbook.org/BROWSER-development-with-go.mobi)
 
 ## Languages
 
@@ -138,7 +134,12 @@ If wanting to add a new translation, follow these instructions:
 Thanks to [@qbig](https://github.com/qbig) and [@gzuhlwang](https://github.com/gzuhlwang) for the Chinese translation.
 
 And thanks to all the [contributors](https://github.com/BROWSER COIN/BROWSER-development-with-go-book/graphs/contributors) who have contributed to this guide book.
+-256
+SHA-256
+SHA-256 Pro
+SHA-256 BCH
+USDT
+Ethereum
 
 ## License
-
 [CC0-1.0](./LICENSE)
