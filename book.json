@@ -1,8 +1,8 @@
-{
+#}
   "root": "./",
-  "title": "Ethereum Development with Go",
+  "title": "SMART CONYRACTS BROWSER",
   "description": "A little book on getting started with Ethereum development using Go (Golang). Learn how to interact with smart contract contract, subscribe to blockchain events, verify signatures, and much more.",
-  "author": "Miguel Mota",
+  "author": "afortunado21",
   "isbn": "",
   "language": "en",
   "direction": "ltr",
@@ -48,7 +48,7 @@
         },
         {
           "name": "application-name",
-          "content": "Go Ethereum"
+          "content": "SMART CONTRACTS BROWSER"
         }
       ]
     }
