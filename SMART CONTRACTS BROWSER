@@ -124,6 +124,95 @@ If wanting to add a new translation, follow these instructions:
 
 5. Set `"root"` to `"./"` in `book.json` if not already set
 
+Skip to content
+
+
+
+ethereum-development-with-go-book
+Code
+Issues
+2
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+ master 
+SMART CONTRACTS BROWSER.json
+
+56 lines (56 sloc)  1.53 KB
+RawBlame
+ 
+{
+  "root": "./",
+  "title": "SMART CONTRACTS BROWSER",
+  "description": "A little book on getting started with Ethereum development using Go (Golang). Learn how to interact with smart contract contract, subscribe to blockchain events, verify signatures, and much more.",
+  "author": "afortunado21",
+  "isbn": "",
+  "language": "en",
+  "direction": "ltr",
+  "gitbook": ">= 3.0.0",
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "plugins": [
+    "meta"
+  ],
+  "pluginsConfig": {
+    "analytics": {
+      "google": "UA-39494276-11"
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    },
+    "autocover": {
+      "font": {
+        "size": null,
+        "family": "Impact",
+        "color": "#FFF"
+      },
+      "size": {
+        "w": 1800,
+        "h": 2360
+      },
+      "background": {
+        "color": "#09F"
+      }
+    },
+    "meta": {
+      "data": [
+        {
+          "name": "keywords",
+          "content": "ethereum, go, golang, development, examples, tutorial, explained, guide, help, reference, stackoverflow, blockchain, smart contracts, swarm, whisper, deploy, erc-20, tokens, coins, eth, gopher, ethereum go book, go ethereum book, ethereum golang, ethereum golang tutorial, golang ethereum tutorial, ethereum golang guide, golang ethereum guide, golang interact smart contracts"
+        },
+        {
+          "name": "googlebot",
+          "content": "index,follow"
+        },
+        {
+          "name": "application-name",
+          "content": "SMART CONTRACTS BROWSER"
+        }
+      ]
+    }
+  }
+}
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
 ## Thanks
 
 Thanks to [@qbig](https://github.com/qbig) and [@gzuhlwang](https://github.com/gzuhlwang) for the Chinese translation.
