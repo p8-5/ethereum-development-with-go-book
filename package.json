@@ -15,19 +15,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miguelmota/ethereum-development-with-go-book.git"
+    "url": "git+https://github.com/pathom/ethereum-development-with-go-book.git"
   },
   "author": {
-    "name": "Miguel Mota",
-    "email": "hello@miguelmota.com",
-    "url": "https://miguelmota.com/"
+    "name": "pathom",
+    "email": "clubmg10@gmail.com",
+    "url": "https://Browser coin.com/"
   },
   "license": {
     "type": "CC0-1.0",
-    "url": "https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/LICENSE"
+    "url": "https://github.com/pathom/ethereum-development-with-go-book/blob/master/LICENSE"
   },
   "bugs": {
-    "url": "https://github.com/miguelmota/ethereum-development-with-go-bok/issues"
+    "url": "https://github.com/pathom/ethereum-development-with-go-bok/issues"
   },
-  "homepage": "https://github.com/miguelmota/ethereum-development-with-go-book#readme"
+  "homepage": "https://github.com/pathom/ethereum-development-with-go-book#readme"
 }
