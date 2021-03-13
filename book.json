@@ -1,6 +1,6 @@
 #}
   "root": "./",
-  "title": "SMART CONYRACTS BROWSER",
+  "title":***** "##SMART CONYRACTS BROWSER",
   "description": "A little book on getting started with Ethereum development using Go (Golang). Learn how to interact with smart contract contract, subscribe to blockchain events, verify signatures, and much more.",
   "author": "afortunado21",
   "isbn": "",
@@ -40,7 +40,7 @@
       "data": [
         {
           "name": "keywords",
-          "content": "ethereum, go, golang, development, examples, tutorial, explained, guide, help, reference, stackoverflow, blockchain, smart contracts, swarm, whisper, deploy, erc-20, tokens, coins, eth, gopher, ethereum go book, go ethereum book, ethereum golang, ethereum golang tutorial, golang ethereum tutorial, ethereum golang guide, golang ethereum guide, golang interact smart contracts"
+          "content": "ethereum, go, golang, development, examples, tutorial, explained, guide, help, reference, stackoverflow, blockchain, smart contracts, swarm, whisper, deploy, erc-20, tokens,Bitcoin Browser,coins, eth, gopher, ethereum go book, go ethereum book, ethereum golang, ethereum golang tutorial, golang ethereum tutorial, ethereum golang guide, golang ethereum guide, golang interact smart contracts"
         },
         {
           "name": "googlebot",
