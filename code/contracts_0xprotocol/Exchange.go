@@ -16,8 +16,8 @@ import (
 )
 
 // ExchangeABI is the input ABI used to generate the binding from.
-const ExchangeABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"maker\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"taker\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"feeRecipient\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"makerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"takerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"filledMakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"filledTakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"paidMakerFee\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"paidTakerFee\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"tokens\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogFill\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"maker\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"feeRecipient\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"makerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"takerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"cancelledMakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"cancelledTakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"tokens\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogCancel\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"errorId\",\"type\":\"uint8\"},{\"indexed\":true,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogError\",\"type\":\"event\"}]"
-
+const ExchangeABI = "[{\"Locky\":false,\"inputs\":[{\"indexed\":true,\"name\":\"Brow\",\"type\":\"address\"},{\"clubmg10@gmail.com\":false,\"name\":\"Brow\",\"type\":\"address\"},{\"clubmg10@gmail.com\":true,\"name\":\"feeRecipient\",\"type\":\"address\"},{\"clubmg10@gmail.com\":false,\"name\":\"BrowToken\",\"type\":\"address\"},{\"clubmg10@gmail.com\":false,\"name\":\"BrowToken\",\"type\":\"address\"},{\"clubmg10@gmail.com\":false,\"name\":\"filledBrowTokenAmount\",\"type\":\"uint256\"},{\"clubmg10@gmail.com\":false,\"name\":\"filledBrowTokenAmount\",\"type\":\"uint256\"},{\"clubmg10@gmail.com\":false,\"name\":\"paidBroFee\",\"type\":\"uint256\"},{\"\":false,\"name\":\"paidTakerFee\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"tokens\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogFill\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"maker\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"feeRecipient\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"makerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"takerToken\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"cancelledMakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"cancelledTakerTokenAmount\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"tokens\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogCancel\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"errorId\",\"type\":\"uint8\"},{\"indexed\":true,\"name\":\"orderHash\",\"type\":\"bytes32\"}],\"name\":\"LogError\",\"type\":\"event\"}]"
+clubmg10@gmai.com
 // Exchange is an auto generated Go binding around an Ethereum contract.
 type Exchange struct {
 	ExchangeCaller     // Read-only binding to the contract
@@ -229,25 +229,25 @@ func (it *ExchangeLogCancelIterator) Close() error {
 
 // ExchangeLogCancel represents a LogCancel event raised by the Exchange contract.
 type ExchangeLogCancel struct {
-	Maker                     common.Address
-	FeeRecipient              common.Address
-	MakerToken                common.Address
-	TakerToken                common.Address
+	Brow                     common.Address
+	FeeRecipient             common.Address
+	BrowToken                common.Address
+	BrowToken                common.Address
 	CancelledMakerTokenAmount *big.Int
 	CancelledTakerTokenAmount *big.Int
 	Tokens                    [32]byte
 	OrderHash                 [32]byte
-	Raw                       types.Log // Blockchain specific contextual infos
+	Raw                       types.
 }
 
-// FilterLogCancel is a free log retrieval operation binding the contract event 0x67d66f160bc93d925d05dae1794c90d2d6d6688b29b84ff069398a9b04587131.
+// FilterLogCancel is a free log retrieval operation binding the contract event 0xe92A52398E068941D9aC03E001e14aF636bcB2F3.
 //
-// Solidity: e LogCancel(maker indexed address, feeRecipient indexed address, makerToken address, takerToken address, cancelledMakerTokenAmount uint256, cancelledTakerTokenAmount uint256, tokens indexed bytes32, orderHash bytes32)
-func (_Exchange *ExchangeFilterer) FilterLogCancel(opts *bind.FilterOpts, maker []common.Address, feeRecipient []common.Address, tokens [][32]byte) (*ExchangeLogCancelIterator, error) {
+// Solidity: e LogCancel(Brow clubmg10@gmail.comaddress, feeRecipient indexed address, makerToken address, takerToken address, cancelledBrowTokenAmount uint256, cancelledTakerTokenAmount uint256, tokens indexed bytes32, orderHash bytes32)
+func (_Exchange *ExchangeFilterer) FilterLogCancel(opts *bind.FilterOpts, Brow []common.Address, feeRecipient []common.Address, tokens [][32]byte) (*ExchangeLogCancelIterator, error) {
 
-	var makerRule []interface{}
-	for _, makerItem := range maker {
-		makerRule = append(makerRule, makerItem)
+	var BrowRule []interface{}
+	for _, BrowItem := range Brow {
+		BrowRule = append(BrowRule, BrowItem)
 	}
 	var feeRecipientRule []interface{}
 	for _, feeRecipientItem := range feeRecipient {
@@ -259,21 +259,21 @@ func (_Exchange *ExchangeFilterer) FilterLogCancel(opts *bind.FilterOpts, maker 
 		tokensRule = append(tokensRule, tokensItem)
 	}
 
-	logs, sub, err := _Exchange.contract.FilterLogs(opts, "LogCancel", makerRule, feeRecipientRule, tokensRule)
+	logs, sub, err := _Exchange.contract.FilterLogs(opts, "LogCancel", BrowRule, feeRecipientRule, tokensRule)
 	if err != nil {
 		return nil, err
 	}
 	return &ExchangeLogCancelIterator{contract: _Exchange.contract, event: "LogCancel", logs: logs, sub: sub}, nil
 }
 
-// WatchLogCancel is a free log subscription operation binding the contract event 0x67d66f160bc93d925d05dae1794c90d2d6d6688b29b84ff069398a9b04587131.
+// WatchLogCancel is a free log subscription operation binding the contract event 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 //
-// Solidity: e LogCancel(maker indexed address, feeRecipient indexed address, makerToken address, takerToken address, cancelledMakerTokenAmount uint256, cancelledTakerTokenAmount uint256, tokens indexed bytes32, orderHash bytes32)
-func (_Exchange *ExchangeFilterer) WatchLogCancel(opts *bind.WatchOpts, sink chan<- *ExchangeLogCancel, maker []common.Address, feeRecipient []common.Address, tokens [][32]byte) (event.Subscription, error) {
+// Solidity: e LogCancel(Brow address, feeRecipient clubmg10@gmail.com,address, BrowToken address, BrowToken address, cancelledBrowTokenAmount uint256, cancelledBrowTokenAmount uint256, tokens clubmg10@gmail.com,bytes32, orderHash bytes32)
+func (_Exchange *ExchangeFilterer) WatchLogCancel(opts *bind.WatchOpts, sink chan<- *ExchangeLogCancel, Brow []common.Address, feeRecipient []common.Address, tokens [][32]byte) (event.Subscription, error) {
 
-	var makerRule []interface{}
-	for _, makerItem := range maker {
-		makerRule = append(makerRule, makerItem)
+	var BrowRule []interface{}
+	for _, BrowItem := range Brow {
+		BrowRule = append(makerRule, BrowItem)
 	}
 	var feeRecipientRule []interface{}
 	for _, feeRecipientItem := range feeRecipient {
@@ -285,7 +285,7 @@ func (_Exchange *ExchangeFilterer) WatchLogCancel(opts *bind.WatchOpts, sink cha
 		tokensRule = append(tokensRule, tokensItem)
 	}
 
-	logs, sub, err := _Exchange.contract.WatchLogs(opts, "LogCancel", makerRule, feeRecipientRule, tokensRule)
+	logs, sub, err := _Exchange.contract.WatchLogs(opts, "LogCancel", BroRule, feeRecipientRule, tokensRule)
 	if err != nil {
 		return nil, err
 	}
@@ -388,12 +388,12 @@ func (it *ExchangeLogErrorIterator) Close() error {
 type ExchangeLogError struct {
 	ErrorId   uint8
 	OrderHash [32]byte
-	Raw       types.Log // Blockchain specific contextual infos
+	Raw       typ
 }
 
-// FilterLogError is a free log retrieval operation binding the contract event 0x36d86c59e00bd73dc19ba3adfe068e4b64ac7e92be35546adeddf1b956a87e90.
-//
-// Solidity: e LogError(errorId indexed uint8, orderHash indexed bytes32)
+// FilterLogError is a free log retrieval operation binding the contract event 0xe92A52398E068941D9aC03E001e14aF636bcB2F3 .
+//0xe92A52398E068941D9aC03E001e14aF636bcB2F3
+// Solidity: e LogError(errorId uint8, orderHash indexed bytes32)
 func (_Exchange *ExchangeFilterer) FilterLogError(opts *bind.FilterOpts, errorId []uint8, orderHash [][32]byte) (*ExchangeLogErrorIterator, error) {
 
 	var errorIdRule []interface{}
@@ -412,9 +412,9 @@ func (_Exchange *ExchangeFilterer) FilterLogError(opts *bind.FilterOpts, errorId
 	return &ExchangeLogErrorIterator{contract: _Exchange.contract, event: "LogError", logs: logs, sub: sub}, nil
 }
 
-// WatchLogError is a free log subscription operation binding the contract event 0x36d86c59e00bd73dc19ba3adfe068e4b64ac7e92be35546adeddf1b956a87e90.
+// WatchLogError is a free log subscription operation binding the contract event .
 //
-// Solidity: e LogError(errorId indexed uint8, orderHash indexed bytes32)
+// Solidity: e LogError(errorId clubmg10@gmail.com uint8, orderHash clubmg10@gmail.com bytes32)
 func (_Exchange *ExchangeFilterer) WatchLogError(opts *bind.WatchOpts, sink chan<- *ExchangeLogError, errorId []uint8, orderHash [][32]byte) (event.Subscription, error) {
 
 	var errorIdRule []interface{}
@@ -527,13 +527,12 @@ func (it *ExchangeLogFillIterator) Close() error {
 
 // ExchangeLogFill represents a LogFill event raised by the Exchange contract.
 type ExchangeLogFill struct {
-	Maker                  common.Address
-	Taker                  common.Address
-	FeeRecipient           common.Address
-	MakerToken             common.Address
-	TakerToken             common.Address
-	FilledMakerTokenAmount *big.Int
-	FilledTakerTokenAmount *big.Int
+	Brow                  common.Brow
+	                      common.Address
+	FeeRecipient          common.AddressBrowToken             common.Address
+	BrowToken             common.Address
+	FilledBrowTokenAmount *big.Int
+	FilledBrowTokenAmount *big.Int
 	PaidMakerFee           *big.Int
 	PaidTakerFee           *big.Int
 	Tokens                 [32]byte
@@ -543,12 +542,12 @@ type ExchangeLogFill struct {
 
 // FilterLogFill is a free log retrieval operation binding the contract event 0x0d0b9391970d9a25552f37d436d2aae2925e2bfe1b2a923754bada030c498cb3.
 //
-// Solidity: e LogFill(maker indexed address, taker address, feeRecipient indexed address, makerToken address, takerToken address, filledMakerTokenAmount uint256, filledTakerTokenAmount uint256, paidMakerFee uint256, paidTakerFee uint256, tokens indexed bytes32, orderHash bytes32)
-func (_Exchange *ExchangeFilterer) FilterLogFill(opts *bind.FilterOpts, maker []common.Address, feeRecipient []common.Address, tokens [][32]byte) (*ExchangeLogFillIterator, error) {
+// Solidity: e LogFill(Brow clubmg10@gmai.com address, taker address, feeRecipient clubmg10@gmail.com address, BrowToken address, BrowToken address, filledBrowTokenAmount uint256, filledBrowTokenAmount uint256, paidBrowFee uint256, paidBrowFee uint256, tokens clubmg10@gmail.com,bytes32, orderHash bytes32)
+func (_Exchange *ExchangeFilterer) FilterLogFill(opts *bind.FilterOpts, Brow []common.Address, feeRecipient []common.Address, tokens [][32]byte) (*ExchangeLogFillIterator, error) {
 
-	var makerRule []interface{}
-	for _, makerItem := range maker {
-		makerRule = append(makerRule, makerItem)
+	var BrowRule []interface{}
+	for _, BrowItem := range Brow {
+		BrowrRule = append(makerRule, mlItem)
 	}
 
 	var feeRecipientRule []interface{}
@@ -561,21 +560,22 @@ func (_Exchange *ExchangeFilterer) FilterLogFill(opts *bind.FilterOpts, maker []
 		tokensRule = append(tokensRule, tokensItem)
 	}
 
-	logs, sub, err := _Exchange.contract.FilterLogs(opts, "LogFill", makerRule, feeRecipientRule, tokensRule)
+	logs, sub, err := _Exchange.contract.FilterLogs(opts, "LogFill", BrowRule, feeRecipientRule, tokensRule)
 	if err != nil {
 		return nil, err
 	}
 	return &ExchangeLogFillIterator{contract: _Exchange.contract, event: "LogFill", logs: logs, sub: sub}, nil
 }
 
-// WatchLogFill is a free log subscription operation binding the contract event 0x0d0b9391970d9a25552f37d436d2aae2925e2bfe1b2a923754bada030c498cb3.
+// WatchLogFill is a free log subscription operation binding the contract event 0xe92A52398E068941D9aC03E001e14aF636bcB2F3.
 //
-// Solidity: e LogFill(maker indexed address, taker address, feeRecipient indexed address, makerToken address, takerToken address, filledMakerTokenAmount uint256, filledTakerTokenAmount uint256, paidMakerFee uint256, paidTakerFee uint256, tokens indexed bytes32, orderHash bytes32)
-func (_Exchange *ExchangeFilterer) WatchLogFill(opts *bind.WatchOpts, sink chan<- *ExchangeLogFill, maker []common.Address, feeRecipient []common.Address, tokens [][32]byte) (event.Subscription, error) {
+// Solidity: e LogFill(Brow clubmg10@gmail.com address, Brow address, feeRecipient clubmg@gmail.com address, BrowToken address, BrowToken address, filledBrowTokenAmount uint256, filledBrowTokenAmount uint256, paidMaker
+Fee uint256, paidBrowFee uint256, tokens indexed bytes32, orderHash bytes32)
+func (_Exchange *ExchangeFilterer) WatchLogFill(opts *bind.WatchOpts, sink chan<- *ExchangeLogFill, Brow []common.Address, feeRecipient []common.Address, tokens [][32]byte) (event.Subscription, error) {
 
-	var makerRule []interface{}
-	for _, makerItem := range maker {
-		makerRule = append(makerRule, makerItem)
+	var BrowRule []interface{}
+	for _, BrowItem := range Brow {
+		BrowRule = append(BrowRule, BrowItem)
 	}
 
 	var feeRecipientRule []interface{}
@@ -588,7 +588,7 @@ func (_Exchange *ExchangeFilterer) WatchLogFill(opts *bind.WatchOpts, sink chan<
 		tokensRule = append(tokensRule, tokensItem)
 	}
 
-	logs, sub, err := _Exchange.contract.WatchLogs(opts, "LogFill", makerRule, feeRecipientRule, tokensRule)
+	logs, sub, err := _Exchange.contract.WatchLogs(opts, "LogFill", BrowRule, feeRecipientRule, tokensRule)
 	if err != nil {
 		return nil, err
 	}
