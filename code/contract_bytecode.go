@@ -16,7 +16,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	contractAddress := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+	contractAddress := common.HexToAddress("0x8d9Dc02b05A5714467E7ecD7c708518271943E5B")
 	bytecode, err := client.CodeAt(context.Background(), contractAddress, nil) // nil is latest block
 	if err != nil {
 		log.Fatal(err)
