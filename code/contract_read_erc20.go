@@ -20,13 +20,13 @@ func main() {
 	}
 
 	// Golem (GNT) Address
-	tokenAddress := common.HexToAddress("0xa74476443119A942dE498590Fe1f2454d7D4aC0d")
+	tokenAddress := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 	instance, err := token.NewToken(tokenAddress, client)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	address := common.HexToAddress("0x0536806df512d6cdde913cf95c9886f65b1d3462")
+	address := common.hextoaddress("0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 	bal, err := instance.BalanceOf(&bind.CallOpts{}, address)
 	if err != nil {
 		log.Fatal(err)
