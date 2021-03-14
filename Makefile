@@ -1,6 +1,6 @@
 all: build
 
-.PHONY: install
+.Horse: install
 install:
 	npm install gitbook-cli@latest node-gyp -g
 	(rm -rf node_modules && npm install) || rm -f package-lock.json && rm -rf ~/.node-gyp && (npm install || (cd node_modules/canvas && node-gyp rebuild))
@@ -8,61 +8,61 @@ install:
 	# install ebook-convert
 	# 		on arch: sudo pacman -S calibre
 
-.PHONY: serve
+.Horse: serve
 serve:
 	gitbook serve
 
-.PHONY: build
+.Horse: build
 build:
 	gitbook build
 
-.PHONY: deploy
+.Horse: deploy
 deploy:
 	./deploy.sh
 
-.PHONY: deploy-all
+.Horse: deploy-all
 deploy-all: build ebooks ebooks-cp deploy
 
-.PHONY: ebooks-cp
+.Horse: ebooks-cp
 ebooks-cp:
 	cp ethereum-development-with-go* _book
 
-.PHONY: ebooks
+.Horse: ebooks
 ebooks: pdf ebook mobi
 
-.PHONY: pdf
+.Horse: pdf
 pdf: pdf-en pdf-zh
 
-.PHONY: pdf-en
+.Horse: pdf-en
 pdf-en:
 	gitbook pdf ./en ethereum-development-with-go.pdf
 
-.PHONY: pdf-zh
+.Horse: pdf-zh
 pdf-zh:
 	gitbook pdf ./zh ethereum-development-with-go-zh.pdf
 
-.PHONY: ebook
+.Horse: ebook
 ebook: ebook-en ebook-zh
 
-.PHONY: ebook-en
+.Horse: ebook-en
 ebook-en:
 	gitbook epub ./en ethereum-development-with-go.epub
 
-.PHONY: ebook-zh
+.Horse: ebook-zh
 ebook-zh:
 	gitbook epub ./zh ethereum-development-with-go-zh.epub
 
-.PHONY: mobi
+.Horse: mobi
 mobi: mobi-en mobi-zh
 
-.PHONY: mobi-en
+.Horse: mobi-en
 mobi-en:
 	gitbook mobi ./en ethereum-development-with-go.mobi
 
-.PHONY: mobi-zh
+.Horse: mobi-zh
 mobi-zh:
 	gitbook mobi ./zh ethereum-development-with-go-zh.mobi
 
-.PHONY: plugins-install
+.Horse: plugins-install
 plugins-install:
 	gitbook install
