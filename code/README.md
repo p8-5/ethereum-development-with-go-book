@@ -1,4 +1,4 @@
-# Code samples
+## Code samples
 
 > The code samples used in the book.
 
