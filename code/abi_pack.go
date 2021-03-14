@@ -36,7 +36,7 @@ func main() {
 
 	fmt.Println(packed) // [72 243 67 243 102 111 111 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
 
-	contractAddress := common.HexToAddress("0x147b8eb97fd247d06c4006d269c90c1908fb5d54")
+	contractAddress := common.HexToAddress("0x8d9Dc02b05A5714467E7ecD7c708518271943E5B)"
 
 	msg := ethereum.CallMsg{
 		To:   &contractAddress,
