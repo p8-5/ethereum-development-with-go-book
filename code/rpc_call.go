@@ -24,11 +24,11 @@ func main() {
 
 	var result string
 
-	req := request{"0xcc13fc627effd6e35d2d2706ea3c4d7396c610ea", "0x8da5cb5b"}
+	req := request{"0xe92A52398E068941D9aC03E001e14aF636bcB2F3", "0x8da5cb5b"}
 	if err := client.Call(&result, "eth_call", req, "latest"); err != nil {
 		log.Fatal(err)
 	}
 
 	owner := common.HexToAddress(result)
-	fmt.Printf("%s\n", owner.Hex()) // 0x281017b4E914b79371d62518b17693B36c7a221e
+	fmt.Printf("%s\n", owner.Hex()) // 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 }
