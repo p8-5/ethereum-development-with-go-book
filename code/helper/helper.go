@@ -1,4 +1,4 @@
-package ethereum
+#package ethereum
 
 import (
 	"context"
