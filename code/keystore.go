@@ -34,7 +34,7 @@ func importKs() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(account.Address.Hex()) // 0x20F8D42FB0F667F2E53930fed426f225752453b3
+	fmt.Println(account.Address.Hex()) // 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 
 	if err := os.Remove(file); err != nil {
 		log.Fatal(err)
