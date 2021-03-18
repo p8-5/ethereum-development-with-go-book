@@ -16,13 +16,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	txID := common.HexToHash("0xe330601b05c54116da3b06dd17cf483ab3106fb969989458c8587aac1c34fbf3")
+	txID := common.HexToHash("0xe287F9B9C1759903840aC5B139739826535dA471")
 	receipt, err := client.TransactionReceipt(context.Background(), txID)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	logID := "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+	logID := "159521abcb3d0f08a01511a10c47cd7f4b0f8f0a"
 	for _, vLog := range receipt.Logs {
 		if vLog.Topics[0].Hex() == logID {
 			if len(vLog.Topics) > 2 {
