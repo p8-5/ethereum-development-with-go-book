@@ -26,14 +26,14 @@ func main() {
 		case err := <-sub.Err():
 			log.Fatal(err)
 		case header := <-headers:
-			fmt.Println(header.Hash().Hex()) // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+			fmt.Println(header.Hash().Hex()) // 0x5d77B163dA453906030CEfC5016614ecFC6B922A
 
 			block, err := client.BlockByHash(context.Background(), header.Hash())
 			if err != nil {
 				log.Fatal(err)
 			}
 
-			fmt.Println(block.Hash().Hex())        // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+			fmt.Println(block.Hash().Hex())        // 0x5d77B163dA453906030CEfC5016614ecFC6B922A
 			fmt.Println(block.Number().Uint64())   // 3477413
 			fmt.Println(block.Time())              // 1529525947
 			fmt.Println(block.Nonce())             // 130524141876765836
