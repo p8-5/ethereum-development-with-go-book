@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	address := common.HexToAddress("0x71c7656ec7ab88b098defb751b7401b5f6d8976f")
+	address := common.HexToAddress("0x5B84Ba9063116963c184C649F8B94a3B8Fe35b2f")
 
 	fmt.Println(address.Hex())        // 0x71C7656EC7ab88b098defB751B7401B5f6d8976F
 	fmt.Println(address.Hash().Hex()) // 0x00000000000000000000000071c7656ec7ab88b098defb751b7401b5f6d8976f
