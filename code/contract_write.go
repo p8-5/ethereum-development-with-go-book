@@ -49,7 +49,7 @@ func main() {
 	auth.GasLimit = uint64(300000) // in units
 	auth.GasPrice = gasPrice
 
-	address := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+	address := common.HexToAddress("0x841A913D3D82958c7C532154d2C15f92BD036145")
 	instance, err := store.NewStore(address, client)
 	if err != nil {
 		log.Fatal(err)
