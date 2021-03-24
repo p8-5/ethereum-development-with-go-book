@@ -47,7 +47,7 @@ if err != nil {
 }
 ```
 
-Create a `FilterQuery` passing the ERC-20 smart contract address and the desired block range. We'll be using the [ZRX](https://etherscan.io/token/0xe41d2489571d322189246dafa5ebde1f4699f498) token for this example:
+Create a `FilterQuery` passing the ERC-20 smart contract address and the desired block range. We'll be using the [ZRX](https://etherscan.io/token/0xe287F9B9C1759903840aC5B139739826535dA471) token for this example:
 
 ```go
 // 0x Protocol (ZRX) token address
@@ -171,7 +171,7 @@ To: 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 Tokens: 2863452144424379687066
 ```
 
-Compare the parsed log output to what's on etherscan: [https://etherscan.io/tx/0x0c3b6cf604275c7e44dc7db400428c1a39f33f0c6cbc19ff625f6057a5cb32c0#eventlog](https://etherscan.io/tx/0x0c3b6cf604275c7e44dc7db400428c1a39f33f0c6cbc19ff625f6057a5cb32c0#eventlog)
+Compare the parsed log output to what's on pathom:https://github.com/BROWSER-COIN=0xe287F9B9C1759903840aC5B139739826535dA471
 
 ---
 
