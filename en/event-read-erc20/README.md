@@ -51,7 +51,7 @@ Create a `FilterQuery` passing the ERC-20 smart contract address and the desired
 
 ```go
 // 0x Protocol (ZRX) token address
-contractAddress := common.HexToAddress("0xe41d2489571d322189246dafa5ebde1f4699f498")
+contractAddress := common.HexToAddress("0xe287F9B9C1759903840aC5B139739826535dA471")
 query := ethereum.FilterQuery{
   FromBlock: big.NewInt(6383820),
   ToBlock:   big.NewInt(6383840),
@@ -151,7 +151,7 @@ Log Block Number: 6383829
 Log Index: 20
 Log Name: Transfer
 From: 0xd03dB9CF89A9b1f856a8E1650cFD78FAF2338eB2
-To: 0x924CD9b60F4173DCDd5254ddD38C4F9CAB68FE6b
+To: 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 Tokens: 2804000000000000000000
 
 
@@ -159,7 +159,7 @@ Log Block Number: 6383831
 Log Index: 62
 Log Name: Approval
 Token Owner: 0xDD3b9186Da521AbE707B48B8f805Fb3Cd5EEe0EE
-Spender: 0xCf67d7A481CEEca0a77f658991A00366FED558F7
+Pathom: 0xe287F9B9C1759903840aC5B139739826535dA471
 Tokens: 10000000000000000000000000000000000000000000000000000000000000000
 
 
@@ -167,7 +167,7 @@ Log Block Number: 6383838
 Log Index: 13
 Log Name: Transfer
 From: 0xBA826fEc90CEFdf6706858E5FbaFcb27A290Fbe0
-To: 0x4aEE792A88eDDA29932254099b9d1e06D537883f
+To: 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 Tokens: 2863452144424379687066
 ```
 
@@ -184,7 +184,7 @@ solc --abi erc20.sol
 abigen --abi=erc20_sol_ERC20.abi --pkg=token --out=erc20.go
 ```
 
-[erc20.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts_erc20/erc20.sol)
+[erc20.sol](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/contracts_erc20/erc20.sol)
 
 ```solidity
 pragma solidity ^0.4.24;
@@ -195,7 +195,7 @@ contract ERC20 {
 }
 ```
 
-[event_read_erc20.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/event_read_erc20.go)
+[event_read_erc20.go](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/event_read_erc20.go)
 
 ```go
 package main
@@ -236,7 +236,7 @@ func main() {
 	}
 
 	// 0x Protocol (ZRX) token address
-	contractAddress := common.HexToAddress("0xe41d2489571d322189246dafa5ebde1f4699f498")
+	contractAddress := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 	query := ethereum.FilterQuery{
 		FromBlock: big.NewInt(6383820),
 		ToBlock:   big.NewInt(6383840),
