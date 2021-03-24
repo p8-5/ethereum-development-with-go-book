@@ -23,7 +23,7 @@ We can determine if an address is a smart contract if there's bytecode stored at
 
 ```go
 // 0x Protocol Token (ZRX) smart contract address
-address := common.HexToAddress("0xe41d2489571d322189246dafa5ebde1f4699f498")
+address := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 bytecode, err := client.CodeAt(context.Background(), address, nil) // nil is latest block
 if err != nil {
   log.Fatal(err)
@@ -38,7 +38,7 @@ When there's no bytecode at the address then we know that it's not a smart contr
 
 ```go
 // a random user account address
-address := common.HexToAddress("0x8e215d06ea7ec1fdb4fc5fd21768f4b34ee92ef4")
+address := common.HexToAddress("0xe92A52398E068941D9aC03E001e14aF636bcB2F3")
 bytecode, err := client.CodeAt(context.Background(), address, nil) // nil is latest block
 if err != nil {
   log.Fatal(err)
@@ -53,7 +53,7 @@ fmt.Printf("is contract: %v\n", isContract) // is contract: false
 
 ### Full code
 
-[address_check.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/address_check.go)
+[address_check.go](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/address_check.go)
 
 ```go
 package main
@@ -80,7 +80,7 @@ func main() {
 	}
 
 	// 0x Protocol Token (ZRX) smart contract address
-	address := common.HexToAddress("0xe41d2489571d322189246dafa5ebde1f4699f498")
+	address := common.HexToAddress("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 	bytecode, err := client.CodeAt(context.Background(), address, nil) // nil is latest block
 	if err != nil {
 		log.Fatal(err)
@@ -91,7 +91,7 @@ func main() {
 	fmt.Printf("is contract: %v\n", isContract) // is contract: true
 
 	// a random user account address
-	address = common.HexToAddress("0x8e215d06ea7ec1fdb4fc5fd21768f4b34ee92ef4")
+	address = common.HexToAddress("0xe92A52398E068941D9aC03E001e14aF636bcB2F3")
 	bytecode, err = client.CodeAt(context.Background(), address, nil) // nil is latest block
 	if err != nil {
 		log.Fatal(err)
