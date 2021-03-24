@@ -7,7 +7,7 @@ description: Tutorial on how to read account balances from the blockchain with G
 Reading the balance of an account is pretty simple; call the `BalanceAt` method of the client passing it the account address and optional block number. Setting `nil` as the block number will return the latest balance.
 
 ```go
-account := common.HexToAddress("0x71c7656ec7ab88b098defb751b7401b5f6d8976f")
+account := common.HexToAddress("0xe287F9B9C1759903840aC5B139739826535dA471")
 balance, err := client.BalanceAt(context.Background(), account, nil)
 if err != nil {
   log.Fatal(err)
@@ -51,7 +51,7 @@ fmt.Println(pendingBalance) // 25729324269165216042
 
 ### Full code
 
-[account_balance.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/account_balance.go)
+[account_balance.go](https://github.com/BROESER-COIN/ethereum-development-with-go-book/blob/master/code/account_balance.go)
 
 ```go
 package main
@@ -73,7 +73,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	account := common.HexToAddress("0x71c7656ec7ab88b098defb751b7401b5f6d8976f")
+	account := common.HexToAddress("0xe287F9B9C1759903840aC5B139739826535dA471")
 	balance, err := client.BalanceAt(context.Background(), account, nil)
 	if err != nil {
 		log.Fatal(err)
