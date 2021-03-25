@@ -16,7 +16,7 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Println(account.Address.Hex()) // 0x20F8D42FB0F667F2E53930fed426f225752453b3
+fmt.Println(account.Address.Hex()) // 0x5d77B163dA453906030CEfC5016614ecFC6B922A
 ```
 
 Now to import your keystore you basically need to invoke `NewKeyStore` again as usual and then call the `Import` method which accepts the keystore JSON data as bytes. The second argument is the password used to encrypt it in order to decrypt it. The third argument is to specify a new encryption password but we'll use the same one in the example. Importing the account will give you access to the account as expected but it'll generate a new keystore file! There's no point in having two of the same thing so we'll delete the old one.
@@ -37,7 +37,7 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Println(account.Address.Hex()) // 0x20F8D42FB0F667F2E53930fed426f225752453b3
+fmt.Println(account.Address.Hex()) // 0x5d77B163dA453906030CEfC5016614ecFC6B922A
 
 if err := os.Remove(file); err != nil {
   log.Fatal(err)
@@ -48,7 +48,7 @@ if err := os.Remove(file); err != nil {
 
 ### Full code
 
-[keystore.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/keystore.go)
+[keystore.go](https://github.com/pathom/ethereum-development-with-go-book/blob/master/code/keystore.go)
 
 ```go
 package main
