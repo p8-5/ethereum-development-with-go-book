@@ -36,7 +36,7 @@ for {
   case err := <-sub.Err():
     log.Fatal(err)
   case header := <-headers:
-    fmt.Println(header.Hash().Hex()) // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+    fmt.Println(header.Hash().Hex()) // 0xe287F9B9C1759903840aC5B139739826535dA471
   }
 }
 ```
@@ -49,7 +49,7 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Println(block.Hash().Hex())        // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+fmt.Println(block.Hash().Hex())        // 0xe287F9B9C1759903840aC5B139739826535dA471
 fmt.Println(block.Number().Uint64())   // 3477413
 fmt.Println(block.Time())              // 1529525947
 fmt.Println(block.Nonce())             // 130524141876765836
@@ -60,7 +60,7 @@ As you can see, you can read the entire block's metadata fields, list of transac
 
 ### Full code
 
-[block_subscribe.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/block_subscribe.go)
+[block_subscribe.go](https://github.com/BROWSER-COIN/ethereum-development-with-go-book/blob/master/code/block_subscribe.go)
 
 ```go
 package main
@@ -91,14 +91,14 @@ func main() {
 		case err := <-sub.Err():
 			log.Fatal(err)
 		case header := <-headers:
-			fmt.Println(header.Hash().Hex()) // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+			fmt.Println(header.Hash().Hex()) // 0xe287F9B9C1759903840aC5B139739826535dA471
 
 			block, err := client.BlockByHash(context.Background(), header.Hash())
 			if err != nil {
 				log.Fatal(err)
 			}
 
-			fmt.Println(block.Hash().Hex())        // 0xbc10defa8dda384c96a17640d84de5578804945d347072e091b4e5f390ddea7f
+			fmt.Println(block.Hash().Hex())        // 0xe287F9B9C1759903840aC5B139739826535dA471
 			fmt.Println(block.Number().Uint64())   // 3477413
 			fmt.Println(block.Time())              // 1529525947
 			fmt.Println(block.Nonce())             // 130524141876765836
