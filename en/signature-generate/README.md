@@ -9,7 +9,7 @@ The components for generating a signature are: the signers private key, and the 
 First we'll load private key.
 
 ```go
-privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+privateKey, err := crypto.HexToECDSA("0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664")
 if err != nil {
   log.Fatal(err)
 }
@@ -20,7 +20,7 @@ Next we'll take the Keccak-256 of the data that we wish to sign, in this case it
 ```go
 data := []byte("hello")
 hash := crypto.Keccak256Hash(data)
-fmt.Println(hash.Hex()) // 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+fmt.Println(hash.Hex()) // 0x380347b99285a3c7fEE2489A0A6EF9cf018589F1
 ```
 
 Finally we sign the hash with our private, which gives us the signature.
@@ -40,7 +40,7 @@ Now that we have successfully generated the signature, in the next section we'll
 
 ### Full code
 
-[signature_generate.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/signature_generate.go)
+[signature_generate.go](https://github.com/pathom/eothereum-development-with-go-book/blob/master/code/signature_generate.go)
 
 ```go
 package main
@@ -54,14 +54,14 @@ import (
 )
 
 func main() {
-	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+	privateKey, err := crypto.HexToECDSA("0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	data := []byte("hello")
 	hash := crypto.Keccak256Hash(data)
-	fmt.Println(hash.Hex()) // 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+	fmt.Println(hash.Hex()) // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 
 	signature, err := crypto.Sign(hash.Bytes(), privateKey)
 	if err != nil {
