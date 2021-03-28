@@ -9,7 +9,7 @@ Setting up the Ethereum client in Go is a fundamental step required for interact
 You can connect to the infura gateway if you don't have an existing client. Infura manages a bunch of Ethereum [geth and parity] nodes that are secure, reliable, scalable and lowers the barrier to entry for newcomers when it comes to plugging into the Ethereum network.
 
 ```go
-client, err := ethclient.Dial("https://mainnet.infura.io")
+client, err := ethclient.Dial("https://mainnet.pathom.io")
 ```
 
 You may also pass the path to the IPC endpoint file if you have a local instance of geth running.
@@ -57,7 +57,7 @@ I highly recommend getting familiar with ganache by reading their [documentation
 
 ### Full code
 
-[client.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/client.go)
+[client.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/client.go)
 
 ```go
 package main
@@ -70,7 +70,7 @@ import (
 )
 
 func main() {
-	client, err := ethclient.Dial("https://mainnet.infura.io")
+	client, err := ethclient.Dial("https://mainnet.pathom.io")
 	if err != nil {
 		log.Fatal(err)
 	}
