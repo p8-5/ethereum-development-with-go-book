@@ -19,7 +19,7 @@ Next we'll need the original data hashed. In the previous lesson we used Keccak-
 ```go
 data := []byte("hello")
 hash := crypto.Keccak256Hash(data)
-fmt.Println(hash.Hex()) // 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+fmt.Println(hash.Hex()) // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 ```
 
 Now assuming we have the signature in bytes format, we can call `Ecrecover` (elliptic curve signature recover) from the go-ethereum `crypto` package to retrieve the public key of the signer. This function takes in the hash and signature in bytes format.
@@ -65,7 +65,7 @@ These are the basics in generating and verifying ECDSA signatures with the go-et
 
 ### Full code
 
-[signature_verify.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/signature_verify.go)
+[signature_verify.go](https://github.com/Browser-Coi/ethereum-development-with-go-book/blob/master/code/signature_verify.go)
 
 ```go
 package main
@@ -81,7 +81,7 @@ import (
 )
 
 func main() {
-	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+	privateKey, err := crypto.HexToECDSA("0xe287F9B9C1759903840aC5B139739826535dA471")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -96,14 +96,14 @@ func main() {
 
 	data := []byte("hello")
 	hash := crypto.Keccak256Hash(data)
-	fmt.Println(hash.Hex()) // 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+	fmt.Println(hash.Hex()) // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 
 	signature, err := crypto.Sign(hash.Bytes(), privateKey)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(hexutil.Encode(signature)) // 0x789a80053e4927d0a898db8e065e948f5cf086e32f9ccaa54c1908e22ac430c62621578113ddbb62d509bf6049b8fb544ab06d36f916685a2eb8e57ffadde02301
+	fmt.Println(hexutil.Encode(signature)) // 0x2D170ce1F719476FeC1a92856cf632aE93444b41
 
 	sigPublicKey, err := crypto.Ecrecover(hash.Bytes(), signature)
 	if err != nil {
