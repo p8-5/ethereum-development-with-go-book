@@ -123,7 +123,7 @@ solc --abi --bin Store.sol -o build
 abigen --bin=./build/Store.bin --abi=./build/Store.abi --pkg=store --out=Store.go
 ```
 
-[Store.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
+[Store.sol](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
 
 ```solidity
 pragma solidity ^0.4.24;
