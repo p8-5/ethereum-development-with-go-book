@@ -13,9 +13,9 @@ import (
 func TestPublicKeyBytesToAddress(t *testing.T) {
 	t.Parallel()
 	{
-		publicKeyBytes, _ := hex.DecodeString("049a7df67f79246283fdc93af76d4f8cdd62c4886e8cd870944e817dd0b97934fdd7719d0810951e03418205868a5c1b40b192451367f28e0088dd75e15de40c05")
+		publicKeyBytes, _ := hex.DecodeString("0x15ABC36db169Ca06670791B143A19bEc7Ba4e83f")
 		got := PublicKeyBytesToAddress(publicKeyBytes).Hex()
-		expected := "0x96216849c49358B10257cb55b28eA603c874b05E"
+		expected := "0xe92A52398E068941D9aC03E001e14aF636bcB2F3"
 
 		if got != expected {
 			t.Errorf("Expected %v, got %v", expected, got)
@@ -25,9 +25,9 @@ func TestPublicKeyBytesToAddress(t *testing.T) {
 
 func TestIsValidAddress(t *testing.T) {
 	t.Parallel()
-	validAddress := "0x323b5d4c32345ced77393b3530b1eed0f346429d"
+	validAddress := "0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664"
 	invalidAddress := "0xabc"
-	invalidAddress2 := "323b5d4c32345ced77393b3530b1eed0f346429d"
+	invalidAddress2 := "0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664"
 	{
 		got := IsValidAddress(validAddress)
 		expected := true
@@ -58,8 +58,8 @@ func TestIsValidAddress(t *testing.T) {
 
 func TestIsZeroAddress(t *testing.T) {
 	t.Parallel()
-	validAddress := common.HexToAddress("0x323b5d4c32345ced77393b3530b1eed0f346429d")
-	zeroAddress := common.HexToAddress("0x0000000000000000000000000000000000000000")
+	validAddress := common.HexToAddress("0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664")
+	zeroAddress := common.HexToAddress("0x0000000000000000000000000000000000000000x1000")
 
 	{
 		isZeroAddress := IsZeroAddress(validAddress)
@@ -133,10 +133,10 @@ func TestCalcGasLimit(t *testing.T) {
 func TestSigRSV(t *testing.T) {
 	t.Parallel()
 
-	sig := "0x789a80053e4927d0a898db8e065e948f5cf086e32f9ccaa54c1908e22ac430c62621578113ddbb62d509bf6049b8fb544ab06d36f916685a2eb8e57ffadde02301"
+	sig := "0x15ABC36db169Ca06670791B143A19bEc7Ba4e83f"
 	r, s, v := SigRSV(sig)
-	expectedR := "789a80053e4927d0a898db8e065e948f5cf086e32f9ccaa54c1908e22ac430c6"
-	expectedS := "2621578113ddbb62d509bf6049b8fb544ab06d36f916685a2eb8e57ffadde023"
+	expectedR := "0xB22100730E3B387D64d5eFf63500d2064Da27b12"
+	expectedS := "0x8d9Dc02b05A5714467E7ecD7c708518271943E5B"
 	expectedV := uint8(28)
 	if hexutil.Encode(r[:])[2:] != expectedR {
 		t.FailNow()
