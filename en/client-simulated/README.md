@@ -69,7 +69,7 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Printf("tx sent: %s\n", signedTx.Hash().Hex()) // tx sent: 0xec3ceb05642c61d33fa6c951b54080d1953ac8227be81e7b5e4e2cfed69eeb51
+fmt.Printf("tx sent: %s\n", signedTx.Hash().Hex()) // tx sent: 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 ```
 
 By now you're probably wondering when will the transaction actually get mined. Well in order to "mine" it, there's one additional important thing you must do; call `Commit` on the client to commit a new mined block.
@@ -98,7 +98,7 @@ So remember that the simulated client allows you to manually mine blocks at your
 
 ### Full code
 
-[client_simulated.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/client_simulated.go)
+[client_simulated.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/client_simulated.go)
 
 ```go
 package main
@@ -164,7 +164,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("tx sent: %s\n", signedTx.Hash().Hex()) // tx sent: 0xec3ceb05642c61d33fa6c951b54080d1953ac8227be81e7b5e4e2cfed69eeb51
+	fmt.Printf("tx sent: %s\n", signedTx.Hash().Hex()) // tx sent: 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 
 	client.Commit()
 
