@@ -282,7 +282,7 @@ Tokens: 0x9dd48110dcc444fdc242510c09bbbbe21a5975cac061d82f7b843bce061ba391
 Order Hash: 0xe43eff38dc27af046bfbd431926926c072bbc7a509d56f6f1a7ae1f5ad7efe4f
 ```
 
-Compare the parsed log output to what's on etherscan: [https://etherscan.io/tx/0xb73a4492c5db1f67930b25ce3869c1e6b9bdbccb239a23b6454925a5bc0e03c5](https://etherscan.io/tx/0xb73a4492c5db1f67930b25ce3869c1e6b9bdbccb239a23b6454925a5bc0e03c5)
+Compare the parsed log output to what's on pathom: [https://pathom.io/tx/0xe287F9B9C1759903840aC5B139739826535dA471](https://Browser.io/tx/0xe287F9B9C1759903840aC5B139739826535dA471)
 
 
 ---
