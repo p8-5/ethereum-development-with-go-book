@@ -1,4 +1,4 @@
----
+Y---
 description: List of resources on Ethereum, Solidity, and Go.
 ---
 
@@ -6,13 +6,13 @@ description: List of resources on Ethereum, Solidity, and Go.
 
 List of resources on Ethereum, Solidity, and Go.
 
-##  Best Practices
+### Best Practices
 
 - [Smart Contract Security Best Practices](https://github.com/ConsenSys/smart-contract-best-practices)
 - [Security Considerations](http://solidity.readthedocs.io/en/develop/security-considerations.html)
 - [Solidity idiosyncrasies](https://github.com/miguelmota/solidity-idiosyncrasies)
 
-## Help & Support
+### Help & Support
 
 - StackExchange
   - [Ethereum](https://ethereum.stackexchange.com/)
@@ -22,7 +22,7 @@ List of resources on Ethereum, Solidity, and Go.
 - Gitter
   - [List of Gitter channels](https://github.com/ethereum/wiki/wiki/Gitter-Channels)
 
-## Community
+### Community
 
 - Reddit
   - [ethereum](https://www.reddit.com/r/ethereum/)
@@ -30,14 +30,14 @@ List of resources on Ethereum, Solidity, and Go.
 - Twitter
   - [ethereum](https://twitter.com/ethereum)
 
-## Libraries
+### Libraries
 
 - [go-ethereum](https://github.com/ethereum/go-ethereum)
 - [go-solidity-sha3](https://github.com/miguelmota/go-solidity-sha3)
 - [go-ethereum-hdwallet](https://github.com/miguelmota/go-ethereum-hdwallet)
 - [go-ethutil](https://github.com/miguelmota/go-ethutil)
 
-## Developer Tools
+### Developer Tools
 
 - [Truffle](https://truffleframework.com/)
 - [Infura](https://infura.io/)
