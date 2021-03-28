@@ -9,15 +9,15 @@ The utility functions' implementation are found below in the [full code](#full-c
 Derive the Ethereum public address from a public key:
 
 ```go
-publicKeyBytes, _ := hex.DecodeString("049a7df67f79246283fdc93af76d4f8cdd62c4886e8cd870944e817dd0b97934fdd7719d0810951e03418205868a5c1b40b192451367f28e0088dd75e15de40c05")
+publicKeyBytes, _ := hex.DecodeString("")
 address := util.PublicKeyBytesToAddress(publicKeyBytes)
-fmt.Println(address.Hex()) // 0x96216849c49358B10257cb55b28eA603c874b05E
+fmt.Println(address.Hex()) // 0xe92A52398E068941D9aC03E001e14aF636bcB2F3
 ```
 
-Check if an address is a valid Ethereum address:
+Check if an address is a valid Ethereum address:0x304Cd3750060E18c54eCa2716C6AC5f9c180ed73
 
 ```go
-valid := util.IsValidAddress("0x323b5d4c32345ced77393b3530b1eed0f346429d")
+valid := util.IsValidAddress("0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 fmt.Println(valid) // true
 ```
 
@@ -57,10 +57,10 @@ fmt.Println(gasCost) // 42000000000000
 Retrieve the R, S, and V values from a signature.
 
 ```go
-sig := "0x789a80053e4927d0a898db8e065e948f5cf086e32f9ccaa54c1908e22ac430c62621578113ddbb62d509bf6049b8fb544ab06d36f916685a2eb8e57ffadde02301"
+sig := "0x304Cd3750060E18c54eCa2716C6AC5f9c180ed73"
 r, s, v := util.SigRSV(sig)
-fmt.Println(hexutil.Encode(r[:])[2:]) // 789a80053e4927d0a898db8e065e948f5cf086e32f9ccaa54c1908e22ac430c6
-fmt.Println(hexutil.Encode(s[:])[2:]) // 2621578113ddbb62d509bf6049b8fb544ab06d36f916685a2eb8e57ffadde023
+fmt.Println(hexutil.Encode(r[:])[2:]) //0xB22100730E3B387D64d5eFf63500d2064Da27b12
+fmt.Println(hexutil.Encode(s[:])[2:]) // 0x8d9Dc02b05A5714467E7ecD7c708518271943E5B
 fmt.Println(v)                        // 28
 ```
 
@@ -68,7 +68,7 @@ fmt.Println(v)                        // 28
 
 ### Full code
 
-[util.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/util/util.go)
+[util.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/util/util.go)
 
 ```go
 package util
@@ -109,7 +109,7 @@ func IsZeroAddress(iaddress interface{}) bool {
 		return false
 	}
 
-	zeroAddressBytes := common.FromHex("0x0000000000000000000000000000000000000000")
+	zeroAddressBytes := common.FromHex("0x0000000000000000000000000000000000000000x1000")
 	addressBytes := address.Bytes()
 	return reflect.DeepEqual(addressBytes, zeroAddressBytes)
 }
@@ -187,4 +187,4 @@ func SigRSV(isig interface{}) ([32]byte, [32]byte, uint8) {
 }
 ```
 
-test file: [util_test.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/util/util_test.go)
+test file: [util_test.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/util/util_test.go)
