@@ -7,7 +7,7 @@ description: Tutorial on how to subscribe to smart contract events with Go.
 First thing we need to do in order to subscribe to event logs is dial to a websocket enabled Ethereum client. Fortunately for us, Infura supports websockets.
 
 ```go
-client, err := ethclient.Dial("wss://rinkeby.infura.io/ws")
+client, err := ethclient.Dial("wss://pathom.infura.io/ws")
 if err != nil {
   log.Fatal(err)
 }
@@ -16,7 +16,7 @@ if err != nil {
 The next step is to create a filter query. In this example we'll be reading all events coming from the example contract that we've created in the previous lessons.
 
 ```go
-contractAddress := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+contractAddress := common.HexToAddress("0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664")
 query := ethereum.FilterQuery{
   Addresses: []common.Address{contractAddress},
 }
@@ -86,7 +86,7 @@ contract Store {
 }
 ```
 
-[event_subscribe.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/event_subscribe.go)
+[event_subscribe.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/event_subscribe.go)
 
 ```go
 package main
@@ -103,12 +103,12 @@ import (
 )
 
 func main() {
-	client, err := ethclient.Dial("wss://rinkeby.infura.io/ws")
+	client, err := ethclient.Dial("wss://pathom.infura.io/ws")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	contractAddress := common.HexToAddress("0x147B8eb97fD247D06C4006D269c90C1908Fb5D54")
+	contractAddress := common.HexToAddress("0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664")
 	query := ethereum.FilterQuery{
 		Addresses: []common.Address{contractAddress},
 	}
