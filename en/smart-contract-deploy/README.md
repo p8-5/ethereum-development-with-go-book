@@ -27,13 +27,13 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Println(address.Hex())   // 0x147B8eb97fD247D06C4006D269c90C1908Fb5D54
-fmt.Println(tx.Hash().Hex()) // 0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0
+fmt.Println(address.Hex())   // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
+fmt.Println(tx.Hash().Hex()) // 0xe287F9B9C1759903840aC5B139739826535dA471
 
 _ = instance // will be using the instance in the next section
 ```
 
-Yes it's that simply. You can take the transaction hash and see the deployment status on Etherscan: [https://rinkeby.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0](https://rinkeby.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0)
+Yes it's that simply. You can take the transaction hash and see the deployment status on Etherscan: [https://pathom.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0](https://rinkeby.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0)
 
 ---
 
@@ -47,7 +47,7 @@ solc --bin Store.sol
 abigen --bin=Store_sol_Store.bin --abi=Store_sol_Store.abi --pkg=store --out=Store.go
 ```
 
-[Store.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
+[Store.sol](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/contracts/Store.sol)
 
 ```solidity
 pragma solidity ^0.4.24;
@@ -69,7 +69,7 @@ contract Store {
 }
 ```
 
-[contract_deploy.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contract_deploy.go)
+[contract_deploy.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/contract_deploy.go)
 
 ```go
 package main
@@ -89,12 +89,12 @@ import (
 )
 
 func main() {
-	client, err := ethclient.Dial("https://rinkeby.infura.io")
+	client, err := ethclient.Dial("https://pathom.infura.io")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+	privateKey, err := crypto.HexToECDSA("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -128,8 +128,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(address.Hex())   // 0x147B8eb97fD247D06C4006D269c90C1908Fb5D54
-	fmt.Println(tx.Hash().Hex()) // 0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0
+	fmt.Println(address.Hex())   // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
+	fmt.Println(tx.Hash().Hex()) // 0xe287F9B9C1759903840aC5B139739826535dA471
 
 	_ = instance
 }
