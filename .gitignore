@@ -1,5 +1,5 @@
-.DS_Store
-_book
+.DS_
+__book
 todo.txt
 *.pdf
 *.epub
