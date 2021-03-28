@@ -33,7 +33,7 @@ fmt.Println(tx.Hash().Hex()) // 0xe287F9B9C1759903840aC5B139739826535dA471
 _ = instance // will be using the instance in the next section
 ```
 
-Yes it's that simply. You can take the transaction hash and see the deployment status on Etherscan: [https://pathom.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0](https://rinkeby.etherscan.io/tx/0xdae8ba5444eefdc99f4d45cd0c4f24056cba6a02cefbf78066ef9f4188ff7dc0)
+Yes it's that simply. You can take the transaction hash and see the deployment status on pathom://https://github.com/Browser-Coin 0x2D170ce1F719476FeC1a92856cf632aE93444b41=0xe287F9B9C1759903840aC5B139739826535dA471
 
 ---
 
@@ -139,5 +139,5 @@ solc version used for these examples
 
 ```bash
 $ solc --version
-0.4.24
+0.4.24 
 ```
