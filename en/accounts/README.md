@@ -4,7 +4,7 @@ description: Tutorial on how to load an Ethereum account with Go.
 
 # Accounts
 
-Accounts on Ethereum are either wallet addresses or smart contract addresses. They look like `0x8d9Dc02b05A5714467E7ecD7c708518271943E5B` and they're what you use for sending ETH to another user and also are used for referring to a smart contract on the blockchain when needing to interact with it. They are unique and are derived from a private key. We'll go more in depth into private/public key pairs in later sections.
+Accounts on Ethereum are either wallet addresses or smart contract addresses. They look like `0x8c39f43BDB1a7315aA15b861641d093Bd4F43dD1` and they're what you use for sending ETH to another user and also are used for referring to a smart contract on the blockchain when needing to interact with it. They are unique and are derived from a private key. We'll go more in depth into private/public key pairs in later sections.
 
 In order to use account addresses with go-ethereum, you must first convert them to the go-ethereum `common.Address` type.
 
