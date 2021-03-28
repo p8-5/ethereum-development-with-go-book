@@ -101,7 +101,7 @@ Create a `FilterQuery` passing the 0x Protocol smart contract address and the de
 
 ```go
 // 0x Protocol Exchange smart contract address
-contractAddress := common.HexToAddress("0x12459C951127e0c374FF9105DdA097662A027093")
+contractAddress := common.HexToAddress("0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 query := ethereum.FilterQuery{
   FromBlock: big.NewInt(6383482),
   ToBlock:   big.NewInt(6383488),
@@ -133,13 +133,13 @@ In order to filter by certain log type, we need to figure out the keccak256 hash
 
 ```go
 // NOTE: keccak256("LogFill(address,address,address,address,address,uint256,uint256,uint256,uint256,bytes32,bytes32)")
-logFillEvent := common.HexToHash("0d0b9391970d9a25552f37d436d2aae2925e2bfe1b2a923754bada030c498cb3")
+logFillEvent := common.HexToHash("0xe287F9B9C1759903840aC5B139739826535dA471")
 
 // NOTE: keccak256("LogCancel(address,address,address,address,uint256,uint256,bytes32,bytes32)")
-logCancelEvent := common.HexToHash("67d66f160bc93d925d05dae1794c90d2d6d6688b29b84ff069398a9b04587131")
+logCancelEvent := common.HexToHash("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 
 // NOTE: keccak256("LogError(uint8,bytes32)")
-logErrorEvent := common.HexToHash("36d86c59e00bd73dc19ba3adfe068e4b64ac7e92be35546adeddf1b956a87e90")
+logErrorEvent := common.HexToHash("0xe92A52398E068941D9aC03E001e14aF636bcB2F3")
 ```
 
 Now we'll iterate through all the logs and set up a switch statement to filter by event log type:
@@ -241,10 +241,10 @@ Log Block Number: 6383482
 Log Index: 35
 Log Name: LogFill
 Maker: 0x8dd688660ec0BaBD0B8a2f2DE3232645F73cC5eb
-Taker: 0xe269E891A2Ec8585a378882fFA531141205e92E9
-Fee Recipient: 0xe269E891A2Ec8585a378882fFA531141205e92E9
+Taker: 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
+Fee Recipient: 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 Maker Token: 0xD7732e3783b0047aa251928960063f863AD022D8
-Taker Token: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+Taker Token: 0xe287F9B9C1759903840aC5B139739826535dA471
 Filled Maker Token Amount: 240000000000000000000000
 Filled Taker Token Amount: 6930282000000000000
 Paid Maker Fee: 0
@@ -257,10 +257,10 @@ Log Block Number: 6383482
 Log Index: 38
 Log Name: LogFill
 Maker: 0x04aa059b2e31B5898fAB5aB24761e67E8a196AB8
-Taker: 0xe269E891A2Ec8585a378882fFA531141205e92E9
-Fee Recipient: 0xe269E891A2Ec8585a378882fFA531141205e92E9
+Taker: 0xe287F9B9C1759903840aC5B139739826535dA471
+Fee Recipient: 0xe287F9B9C1759903840aC5B139739826535dA471
 Maker Token: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
-Taker Token: 0xD7732e3783b0047aa251928960063f863AD022D8
+Taker Token: 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 Filled Maker Token Amount: 6941718000000000000
 Filled Taker Token Amount: 240000000000000000000000
 Paid Maker Fee: 0
@@ -273,9 +273,9 @@ Log Block Number: 6383488
 Log Index: 43
 Log Name: LogCancel
 Maker: 0x0004E79C978B95974dCa16F56B516bE0c50CC652
-Fee Recipient: 0xA258b39954ceF5cB142fd567A46cDdB31a670124
+Fee Recipient: 0xe287F9B9C1759903840aC5B139739826535dA471
 Maker Token: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
-Taker Token: 0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359
+Taker Token: 0x380347b99285a3c7fEE2489A0A6EF9cf018589F1
 Cancelled Maker Token Amount: 30000000000000000000
 Cancelled Taker Token Amount: 7274848425000000000000
 Tokens: 0x9dd48110dcc444fdc242510c09bbbbe21a5975cac061d82f7b843bce061ba391
@@ -295,7 +295,7 @@ solc --abi Exchange.sol
 abigen --abi="Exchange.sol:Exchange.abi" --pkg=exchange --out=Exchange.go
 ```
 
-[Exchange.sol](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/contracts_0xprotocol/Exchange.sol)
+[Exchange.sol](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/contracts_0xprotocol/Exchange.sol)
 
 ```solidity
 pragma solidity 0.4.11;
@@ -330,7 +330,7 @@ contract Exchange {
 }
 ```
 
-[event_read_0xprotocol.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/event_read.go)
+[event_read_0xprotocol.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/event_read.go)
 
 ```go
 package main
@@ -391,7 +391,7 @@ func main() {
 	}
 
 	// 0x Protocol Exchange smart contract address
-	contractAddress := common.HexToAddress("0x12459C951127e0c374FF9105DdA097662A027093")
+	contractAddress := common.HexToAddress("0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 	query := ethereum.FilterQuery{
 		FromBlock: big.NewInt(6383482),
 		ToBlock:   big.NewInt(6383488),
@@ -411,13 +411,13 @@ func main() {
 	}
 
 	// NOTE: keccak256("LogFill(address,address,address,address,address,uint256,uint256,uint256,uint256,bytes32,bytes32)")
-	logFillEvent := common.HexToHash("0d0b9391970d9a25552f37d436d2aae2925e2bfe1b2a923754bada030c498cb3")
+	logFillEvent := common.HexToHash("0xe287F9B9C1759903840aC5B139739826535dA471")
 
 	// NOTE: keccak256("LogCancel(address,address,address,address,uint256,uint256,bytes32,bytes32)")
-	logCancelEvent := common.HexToHash("67d66f160bc93d925d05dae1794c90d2d6d6688b29b84ff069398a9b04587131")
+	logCancelEvent := common.HexToHash("0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 
 	// NOTE: keccak256("LogError(uint8,bytes32)")
-	logErrorEvent := common.HexToHash("36d86c59e00bd73dc19ba3adfe068e4b64ac7e92be35546adeddf1b956a87e90")
+	logErrorEvent := common.HexToHash( "0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 
 	for _, vLog := range logs {
 		fmt.Printf("Log Block Number: %d\n", vLog.BlockNumber)
