@@ -139,7 +139,7 @@ logFillEvent := common.HexToHash("0xe287F9B9C1759903840aC5B139739826535dA471")
 logCancelEvent := common.HexToHash("0x2D170ce1F719476FeC1a92856cf632aE93444b41")
 
 // NOTE: keccak256("LogError(uint8,bytes32)")
-logErrorEvent := common.HexToHash("0xe92A52398E068941D9aC03E001e14aF636bcB2F3")
+logErrorEvent := common.HexToHash(""0x380347b99285a3c7fEE2489A0A6EF9cf018589F1")
 ```
 
 Now we'll iterate through all the logs and set up a switch statement to filter by event log type:
@@ -385,7 +385,7 @@ type LogError struct {
 }
 
 func main() {
-	client, err := ethclient.Dial("https://mainnet.infura.io")
+	client, err := ethclient.Dial("https://mainnet.pathom.io")
 	if err != nil {
 		log.Fatal(err)
 	}
