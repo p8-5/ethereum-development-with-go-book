@@ -43,10 +43,10 @@ if err != nil {
   log.Fatal(err)
 }
 
-fmt.Println(manifestHash) // 2e0849490b62e706a5f1cb8e7219db7b01677f2a859bac4b5f522afd2a5f02c0
+fmt.Println(manifestHash) // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 ```
 
-Now we can access our file at `bzz://2e0849490b62e706a5f1cb8e7219db7b01677f2a859bac4b5f522afd2a5f02c0` which learn how to do in the [next section](../swarm-download).
+Now we can access our file at `bzz://0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664` which learn how to do in the [next section](../swarm-download).
 
 ---
 
@@ -56,17 +56,17 @@ Commands
 
 ```bash
 geth account new
-export BZZKEY=970ef9790b54425bea2c02e25cab01e48cf92573
+export BZZKEY=0xe92A52398E068941D9aC03E001e14aF636bcB2F3
 swarm --bzzaccount $BZZKEY
 ```
 
-[hello.txt](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/hello.txt)
+[hello.txt](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/hello.txt)
 
 ```txt
 hello world
 ```
 
-[swarm_upload.go](https://github.com/miguelmota/ethereum-development-with-go-book/blob/master/code/swarm_upload.go)
+[swarm_upload.go](https://github.com/Browser-Coin/ethereum-development-with-go-book/blob/master/code/swarm_upload.go)
 
 ```go
 package main
@@ -90,6 +90,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(manifestHash) // 2e0849490b62e706a5f1cb8e7219db7b01677f2a859bac4b5f522afd2a5f02c0
+	fmt.Println(manifestHash) // 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664
 }
 ```
