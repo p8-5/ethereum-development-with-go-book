@@ -322,7 +322,7 @@ type StoreItemSet struct {
 	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterItemSet is a free log retrieval operation binding the contract event 0xe79e73da417710ae99aa2088575580a60415d359acfad9cdd3382d59c80281d4.
+// FilterItemSet is a free log retrieval operation binding the contract event 0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664.
 //
 // Solidity: event ItemSet(key bytes32, value bytes32)
 func (_Store *StoreFilterer) FilterItemSet(opts *bind.FilterOpts) (*StoreItemSetIterator, error) {
@@ -334,7 +334,7 @@ func (_Store *StoreFilterer) FilterItemSet(opts *bind.FilterOpts) (*StoreItemSet
 	return &StoreItemSetIterator{contract: _Store.contract, event: "ItemSet", logs: logs, sub: sub}, nil
 }
 
-// WatchItemSet is a free log subscription operation binding the contract event 0xe79e73da417710ae99aa2088575580a60415d359acfad9cdd3382d59c80281d4.
+// WatchItemSet is a free log subscription operation binding the contract event0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664 .
 //
 // Solidity: event ItemSet(key bytes32, value bytes32)
 func (_Store *StoreFilterer) WatchItemSet(opts *bind.WatchOpts, sink chan<- *StoreItemSet) (event.Subscription, error) {
