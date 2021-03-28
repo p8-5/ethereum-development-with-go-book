@@ -2,7 +2,7 @@
 description: Tutorial on how to deploy a smart contract with Go.
 ---
 
-# Deploying a Smart Contract
+## Deploying a Smart Contract
 
 If you haven't already, check out the [section on smart contract compilation](../smart-contract-compile) since this lesson requires knowledge on compiling a solidity smart contract to a Go contract file.
 
@@ -139,5 +139,5 @@ solc version used for these examples
 
 ```bash
 $ solc --version
-0.4.24+commit.e67f0147.Emscripten.clang
+0.4.24
 ```
