@@ -1,6 +1,11 @@
+
+
+---
+---
 ---
 description: Tutorial on how to query an ERC20 token smart contract with Go.
 ---
+
 
 # Querying an ERC20 Token Smart Contract
 
